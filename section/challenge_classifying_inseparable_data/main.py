@@ -15,7 +15,7 @@ X_poly = pipe.fit_transform(X)
 
 lr = LogisticRegression()
 param_grid = {'C':[0.01,0.1,1,10,100]}
-grid_cv = GridSearchCV(lr,param_grid,cv=5).fit(X_poly,y)
+grid_cv = GridSearchCV(lr,param_grid).fit(X_poly,y)
 
 best_score = grid_cv.best_score_
 best_model = grid_cv.best_estimator_
